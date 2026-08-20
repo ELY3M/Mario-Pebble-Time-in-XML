@@ -1,4 +1,4 @@
-# Mario Time 
+# Mario Pebble Time for Android WearOS
 
 This watchface is based off mario pebble at https://github.com/ClusterM/pebble-mario   
 

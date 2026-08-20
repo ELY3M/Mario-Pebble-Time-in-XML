@@ -1,4 +1,3 @@
 <resources>
-    <string name="watch_face_name">Mario Time</string>
-    <string name="greeting">Hello, world!</string>
+    <string name="watch_face_name">Mario Pebble Time</string>
 </resources>
