@@ -1,0 +1,84 @@
+<WatchFace
+    height="450"
+    width="450">
+    <Metadata
+        key="CLOCK_TYPE"
+        value="DIGITAL" />
+    <Scene>
+
+        <!-- background -->
+        <PartImage x="0" y="0" width="450" height="450">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Image resource="back"/>
+        </PartImage>
+
+<!--
+        <PartImage x="0" y="0" width="450" height="450">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Image resource="mario"/>
+        </PartImage>
+-->
+
+        <PartAnimatedImage x="0" y="0" width="450" height="450">
+            <Variant mode="AMBIENT" target="alpha" value="0"/>
+            <AnimationController play="ON_NEXT_MINUTE" />
+            <SequenceImages loopCount="1">
+                <Image resource="mario3"/>
+                <Image resource="mario2"/>
+                <Image resource="mario"/>
+            </SequenceImages>
+        </PartAnimatedImage>
+
+        <!--
+        <PartAnimatedImage x="0" y="0" width="450" height="450" name="mario" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0"/>
+            <SequenceImages loopCount="1">
+                <Image resource="mario"/>
+                <Image resource="mario2"/>
+                <Image resource="mario3"/>
+            </SequenceImages>
+            <AnimationController play="ON_NEXT_MINUTE" repeat="TRUE" beforePlaying="FIRST_FRAME"/>
+        </PartAnimatedImage>
+-->
+
+
+        <PartImage x="0" y="0" width="450" height="450" alpha="0">
+            <Variant mode="AMBIENT" target="alpha" value="255" />
+            <Image resource="block_black" />
+        </PartImage>
+
+
+        <DigitalClock height="450" width="450" x="0" y="0">
+
+            <TimeText format="hh:mm" height="100" width="450" x="0" y="108">
+                <Variant mode="AMBIENT" target="alpha" value="0" />
+                <Font color="#000000" family="m04b" size="50" />
+            </TimeText>
+            <TimeText format="hh:mm" height="96" width="450" x="-4" y="104">
+                <Variant mode="AMBIENT" target="alpha" value="0" />
+                <Font color="#DE5916" family="m04b" size="50" />
+            </TimeText>
+
+
+
+            <TimeText alpha="0" format="hh:mm" height="100" width="450" x="0" y="108">
+                <Variant mode="AMBIENT" target="alpha" value="255" />
+                <Font color="#ffffffff" family="m04b" size="50" />
+            </TimeText>
+        </DigitalClock>
+
+        <PartText x="51" y="50" width="348" height="50" name="Date" alpha="255">
+            <Text><Font family="m04b" size="19" color="#ffffffff">
+                <Template>%s %s %s
+                    <Parameter expression="[MONTH_S]"/>
+                    <Parameter expression="[DAY_Z]"/>
+                    <Parameter expression="[YEAR]"/>
+                </Template></Font></Text></PartText>
+
+
+
+
+
+
+    </Scene>
+</WatchFace>
